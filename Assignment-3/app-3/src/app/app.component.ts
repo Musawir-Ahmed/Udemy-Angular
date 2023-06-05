@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app-3';
+  view ='recipe';
+
+  changeView(passedData:any)
+  {
+    this.view=passedData;
+    console.log(this.view);
+  }
+
 }

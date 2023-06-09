@@ -1,0 +1,19 @@
+.btn{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+}
+
+
+.recipe-detail-cont
+{
+    margin:1%;
+    padding:1%;
+    /* border: 2px solid black; */
+    height: 78vh !important;
+    overflow: hidden;
+    overflow-y: visible;
+    position: relative;
+}

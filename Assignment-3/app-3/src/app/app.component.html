@@ -1,11 +1,8 @@
-<app-header (showPart)="changeView($event)"></app-header>
-<div class="container">
+<app-header></app-header>
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <app-recipies *ngIf="view=='recipe';else elseBlock"></app-recipies>
-      <ng-template #elseBlock> 
-        <app-shopping-list></app-shopping-list>
-      </ng-template>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div> 

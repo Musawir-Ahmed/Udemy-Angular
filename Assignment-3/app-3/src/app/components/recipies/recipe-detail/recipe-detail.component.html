@@ -1,38 +1,55 @@
-<div class="row">
-    <div class="col-xs-12">
-        <img [src]="recipe.imagePath" alt="" style="max-height: 300px;">
-    </div>
-</div>
+<div class="recipe-detail-cont">
 
-<div class="row">
-    <div class="col-xs-12">
-        <h1>{{recipe.name}}</h1>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col-xs-12">
-        <div class="btn-group" appDropdownDirectiveTs>
-            <button type="button" class="btn btn-primary dropdown-toggle" >
-                Manage Recipe <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li> <a href="">To Shopping List</a> </li>
-                <li> <a href="">Edit Recipe</a> </li>
-                <li> <a href="">Delete Recipe</a> </li>
-            </ul>
+    <div class="btn-group manageBtn" appDropdownDirectiveTs>
+        <button type="button" class="btn btn-primary dropdown-toggle" >
+            Manage Recipe <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li> <a  (click)="showIngredientToShoppingList(recipe.ingredients)">To Shopping List</a> </li>
+            <li> <a [routerLink]="['edit']"  >Edit Recipe</a> </li>
+            <li> <a >Delete Recipe</a> </li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <img [src]="recipe.imagePath" alt="" style="max-height: 300px;">
         </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="col-xs-12">
-        {{recipe.description}}
+    <br>
+        
+    <div class="row">
+        <div class="col-xs-6">
+            <h1>{{recipe.name}}</h1>
+        </div>
     </div>
-</div>
+    
+    
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <br>
+            <h4><b>Description :</b></h4>
+            {{recipe.description}}
+        </div>
+    </div>
 
-<div class="row">
-    <div class="col-xs-12">
-        Ingredients
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="list-group">
+                <br>
+                <h4><b>Ingredients :</b></h4>
+                <span *ngFor="let item of recipe.ingredients">
+                    <li class="list-group-item">
+                        {{item.name}} - {{item.amount}}
+                    </li>
+                    <br>
+                </span>
+
+
+            </ul>
+        </div>
     </div>
 </div>

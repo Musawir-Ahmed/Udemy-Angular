@@ -1,0 +1,32 @@
+.btn
+{
+    width:150px !important;
+}
+
+.recipe-detail-cont
+{
+    margin:1%;
+    padding:1%;
+    /* border: 2px solid black; */
+    height: 85vh !important;
+    overflow: hidden;
+    overflow-y: visible;
+    position: relative;
+}
+
+
+.manageBtn
+{
+    z-index: 2;
+    position: fixed;
+    right:5%;
+}
+
+a{
+    cursor: pointer;
+}
+
+a:hover
+{
+    background-color: beige;
+}
